@@ -1,0 +1,51 @@
+SOLVER:Ti-81 by Michael Harmon Oct.  1994
+
+Disc:  The TI-81 Solver allows you to solve an equation for one unknown
+variable.
+
+ USING SOLVER81: I have tried to make this program very simple to use.
+Prior to executing the program, you must enter the the two sides of the
+equation into the Y1= and Y2= functions.  EX: 2x+3=x+4,  Y1=2X+3 , Y2=X+4.
+After entering the equations execute the program to solve.  Feel free to
+distribute this program.  I am open to comments/suggestions/complaints my
+Internet address is:
+                            Valjean943@aol.com
+
+Enjoy  :)
+
+
+Version 1.2  (c)1994
+
+:PRGM:SOLVER
+: ClrStat
+: 2 -> X
+: Y1 -> A
+: 3 -> X
+: Y1  -> B
+: 2 -> {X}(1)
+: 3 -> {X}(2)
+: A -> {Y}(1)
+: B -> {Y}(2)
+: LinReg
+: b -> S
+: a -> I
+: 2 -> X
+: Y2 -> A
+: 3 -> X
+: Y2 -> B
+: A -> {Y}(1)
+: B -> {Y}(2)
+: If {Y}(1)={Y}(2)
+: Goto 0
+: LinReg
+: S-b -> S
+: a-I -> I
+: I/S -> X
+: Lbl 1
+: ClrHome
+: Disp "X= "
+: Disp X
+: Stop
+: Lbl 0
+: (A-I)/S -> X
+: Goto 1                      
